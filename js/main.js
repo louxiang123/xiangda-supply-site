@@ -62,7 +62,7 @@ function handleSubmit(event) {
     btn.textContent = 'Sent! We will reply within 24h';
     btn.style.background = '#059669';
     btn.style.pointerEvents = 'none';
-    window.location.href = 'mailto:YOUR_EMAIL@example.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    window.location.href = 'mailto:xianglou1@outlook.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     setTimeout(function() {
       form.reset();
       btn.textContent = orig;
