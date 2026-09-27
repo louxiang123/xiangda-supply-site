@@ -70,9 +70,11 @@ Google Search Console（已验证收录）
 </div>
 ```
 
-### 3. 改联系方式
-- WhatsApp：搜索 `YOUR_NUMBER`，替换为真实号码（3 个文件）
-- 邮箱：搜索 `YOUR_EMAIL`，替换为真实邮箱（`js/main.js`）
+### 3. 改询盘接收邮箱
+- 询盘表单通过 FormSubmit 接口提交，接收邮箱写在 `js/main.js`：
+  `https://formsubmit.co/ajax/<你的邮箱>`
+- 改邮箱：把该 URL 里的邮箱替换成新地址即可。**首次提交后** FormSubmit 会给新邮箱发一封激活邮件，点确认后才会开始转发
+- 站内无 WhatsApp 入口（公司目前没有 WhatsApp 账号）
 
 ### 4. 更换 Hero 背景图
 - 修改 `css/style.css` 中 `.hero` 和 `.page-hero` 的 `background` 属性里的图片 URL
@@ -92,7 +94,7 @@ Google Search Console（已验证收录）
 例如：
 - "帮我在 products.html 的箱包品类里加一个新产品"
 - "帮我把首页 hero 标题改成中文"
-- "帮我把所有页面的 WhatsApp 链接换成 +8613812345678"
+- "帮我修改询盘表单的接收邮箱"
 
 ## 重要提醒
 
