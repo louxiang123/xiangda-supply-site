@@ -40,35 +40,45 @@ function handleSubmit(event) {
   };
 
   var subject = 'Sourcing Request: ' + data.category + ' - ' + (data.company || data.name);
-  var body = [
-    'Name: ' + data.name,
-    'Company: ' + (data.company || 'N/A'),
-    'Email: ' + data.email,
-    'WhatsApp: ' + (data.whatsapp || 'N/A'),
-    'Category: ' + data.category,
-    'Quantity: ' + (data.quantity || 'N/A'),
-    'Target Price: ' + (data.budget || 'N/A'),
-    'Requirements: ' + (data.message || 'N/A'),
-    '---',
-    'Submitted via xiangdasupply.com'
-  ].join('\n');
+  var payload = Object.assign({}, data, {
+    _subject: subject,
+    _template: 'table',
+    _captcha: 'false'
+  });
 
   var btn = form.querySelector('.btn-submit');
   var orig = btn.textContent;
   btn.textContent = 'Sending...';
   btn.disabled = true;
 
-  setTimeout(function() {
-    btn.textContent = 'Sent! We will reply within 24h';
-    btn.style.background = '#059669';
-    btn.style.pointerEvents = 'none';
-    window.location.href = 'mailto:xianglou1@outlook.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    setTimeout(function() {
+  fetch('https://formsubmit.co/ajax/xianglou1@outlook.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+    .then(function (res) { return res.json(); })
+    .then(function (out) {
+      if (!out || (out.success !== 'true' && out.success !== true)) {
+        throw new Error('submit failed');
+      }
       form.reset();
-      btn.textContent = orig;
-      btn.style.background = '';
+      btn.textContent = 'Sent! We will reply within 24h';
+      btn.style.background = '#059669';
+      btn.style.pointerEvents = 'none';
+      setTimeout(function () {
+        btn.textContent = orig;
+        btn.style.background = '';
+        btn.style.pointerEvents = '';
+        btn.disabled = false;
+      }, 6000);
+    })
+    .catch(function () {
+      btn.textContent = 'Send failed - please try again';
+      btn.style.background = '#dc2626';
       btn.disabled = false;
-      btn.style.pointerEvents = '';
-    }, 4000);
-  }, 800);
+      setTimeout(function () {
+        btn.textContent = orig;
+        btn.style.background = '';
+      }, 6000);
+    });
 }
