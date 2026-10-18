@@ -144,7 +144,7 @@ a { color: inherit; text-decoration: none; }
 .btn-outline { border: 1.5px solid var(--slate-600); color: var(--white); margin-left: 12px; }
 .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.05); }
 .btn-link { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
-.btn-link::after { content: ' →'; transition: margin var(--transition); }
+.btn-link::after { content: ' 鈫?; transition: margin var(--transition); }
 .btn-link:hover::after { margin-left: 4px; }
 
 /* ===== SECTIONS ===== */
@@ -239,7 +239,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: var(--radius); position: relative;
 }
 .process-step::after {
-  content: '→'; position: absolute; right: -14px; top: 50%;
+  content: '鈫?; position: absolute; right: -14px; top: 50%;
   transform: translateY(-50%); color: var(--slate-300);
   font-size: 1.2rem; font-weight: 700;
 }
@@ -251,7 +251,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.85rem; font-weight: 700;
   margin: 0 auto 12px;
 }
-.process-step h4 { font-size: 0.85rem; font-weight: 600; color: var(--slate-900); margin-bottom: 4px; }
+.process-step h3 { font-size: 0.85rem; font-weight: 600; color: var(--slate-900); margin-bottom: 4px; }
 .process-step p { font-size: 0.75rem; color: var(--slate-500); }
 
 /* ===== PRODUCT PAGE ===== */
@@ -261,6 +261,11 @@ a { color: inherit; text-decoration: none; }
 }
 .page-hero h1 { font-family: var(--font-display); font-size: 2.2rem; margin-bottom: 8px; }
 .page-hero p { color: var(--slate-400); font-size: 0.95rem; }
+
+.page-breadcrumb { font-size: 0.8rem; margin-bottom: 18px; }
+.page-breadcrumb a { color: var(--slate-400); text-decoration: none; }
+.page-breadcrumb a:hover { color: var(--white); }
+.page-breadcrumb .sep { color: var(--slate-600); margin: 0 8px; }
 
 .product-section { padding: 64px 0; border-bottom: 1px solid var(--slate-100); }
 .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -397,7 +402,7 @@ a { color: inherit; text-decoration: none; }
   padding: 48px 0 24px;
 }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 36px; }
-.footer h4 { color: var(--white); font-size: 0.9rem; font-weight: 600; margin-bottom: 14px; }
+.footer h3 { color: var(--white); font-size: 0.9rem; font-weight: 600; margin-bottom: 14px; }
 .footer-brand p { font-size: 0.82rem; margin-bottom: 10px; }
 .footer a {
   display: block; font-size: 0.82rem; color: var(--slate-500);
