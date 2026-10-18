@@ -1,16 +1,30 @@
 /* Xiangda Supply Chain - Main JS */
 
 function toggleMenu() {
-  document.getElementById('nav').classList.toggle('open');
+  var nav = document.getElementById('nav');
+  nav.classList.toggle('open');
+  document.body.classList.toggle('nav-open', nav.classList.contains('open'));
+}
+
+function closeMenu() {
+  document.getElementById('nav').classList.remove('open');
+  document.body.classList.remove('nav-open');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   var links = document.querySelectorAll('#nav a');
   links.forEach(function(l) {
     l.addEventListener('click', function() {
-      document.getElementById('nav').classList.remove('open');
+      closeMenu();
     });
   });
+
+  var backdrop = document.querySelector('.nav-backdrop');
+  if (backdrop) {
+    backdrop.addEventListener('click', function() {
+      closeMenu();
+    });
+  }
 
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     a.addEventListener('click', function(e) {
@@ -36,7 +50,8 @@ function handleSubmit(event) {
     category: form.querySelector('#category').value,
     quantity: form.querySelector('#quantity').value,
     budget: form.querySelector('#budget').value,
-    message: form.querySelector('#message').value
+    message: form.querySelector('#message').value,
+    reflink: form.querySelector('#reflink').value
   };
 
   var subject = 'Sourcing Request: ' + data.category + ' - ' + (data.company || data.name);
