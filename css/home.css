@@ -261,7 +261,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 }
 .stat{padding-right:32px}
 .stat + .stat{padding-left:32px;border-left:1px solid var(--navy-soft)}
-.stat h3{
+.stat .stat-value{
   font-family:var(--f-display);font-weight:600;
   font-size:clamp(2rem,4vw,4rem);line-height:1;letter-spacing:-.03em;color:var(--on-navy);
   font-feature-settings:'tnum';
@@ -839,5 +839,5 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   .p-num{opacity:1}
   .p-title{color:var(--ink)}
   .p-dot{background:var(--gold);border-color:var(--gold-deep);box-shadow:0 0 0 4px rgba(201,169,106,.16)}
-  .stat h3,.data-val{font-size:26px}
+  .stat .stat-value,.data-val{font-size:26px}
 }
