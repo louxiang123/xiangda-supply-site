@@ -118,6 +118,10 @@ body.nav-open .nav-backdrop{opacity:1;pointer-events:auto}
   content:'';position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(52% 44% at 85% 0%,rgba(27,52,85,.26) 0%,transparent 62%);
 }
+.b-breadcrumb{position:relative;display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:16px;font-size:12px;letter-spacing:.02em;color:#C3CDDA}
+.b-breadcrumb a{color:#C3CDDA;text-decoration:none}
+.b-breadcrumb a:hover{color:#F4F1E8}
+.b-breadcrumb .sep{color:#94A3B8}
 .b-eyebrow{
   position:relative;display:flex;align-items:center;gap:12px;
   font-size:11px;font-weight:600;letter-spacing:.10em;text-transform:uppercase;color:var(--on-navy-muted);
@@ -167,7 +171,7 @@ body.nav-open .nav-backdrop{opacity:1;pointer-events:auto}
 .b-quote-panel p{font-size:15px;line-height:1.6;margin:0 0 20px}
 .b-quote-panel .b-cta{justify-self:start;height:48px}
 .b-related{margin-top:48px;padding-top:32px;border-top:1px solid var(--hairline)}
-.b-related h4{font-size:11px;font-weight:600;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+.b-related h3{font-size:11px;font-weight:600;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
 .b-related-list{display:flex;flex-direction:column;gap:10px}
 .b-related-list a{font-size:15px;font-weight:500;color:var(--ink-2);transition:color var(--m-quick) var(--ease)}
 .b-related-list a:hover{color:var(--gold-deep)}
