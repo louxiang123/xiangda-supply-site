@@ -144,7 +144,7 @@ a { color: inherit; text-decoration: none; }
 .btn-outline { border: 1.5px solid var(--slate-600); color: var(--white); margin-left: 12px; }
 .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.05); }
 .btn-link { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
-.btn-link::after { content: ' 鈫?; transition: margin var(--transition); }
+.btn-link::after { content: ' →'; transition: margin var(--transition); }
 .btn-link:hover::after { margin-left: 4px; }
 
 /* ===== SECTIONS ===== */
@@ -239,7 +239,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: var(--radius); position: relative;
 }
 .process-step::after {
-  content: '鈫?; position: absolute; right: -14px; top: 50%;
+  content: '→'; position: absolute; right: -14px; top: 50%;
   transform: translateY(-50%); color: var(--slate-300);
   font-size: 1.2rem; font-weight: 700;
 }
