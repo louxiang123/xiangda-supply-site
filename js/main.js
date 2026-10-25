@@ -1,5 +1,15 @@
 /* Xiangda Supply Chain - Main JS */
 
+/* Auto-reply that FormSubmit sends to the buyer once a request is accepted. */
+var AUTORESPONSE = 'Thank you for your sourcing request. We have received it and a sourcing specialist will reply within 24 hours (Monday to Saturday, GMT+8). If you already have product photos, a reference link, target quantity or a sample deadline, simply reply to this email and we will add it to your brief. - Xiangda Supply Chain, Jinhua, Zhejiang, China';
+
+/* Forward conversion events to js/analytics.js (no-op while GA is disabled). */
+function analyticsTrack(name, params) {
+  if (typeof window.XiangdaTrack === 'function') {
+    window.XiangdaTrack(name, params);
+  }
+}
+
 function toggleMenu() {
   var nav = document.getElementById('nav');
   nav.classList.toggle('open');
@@ -58,7 +68,8 @@ function handleSubmit(event) {
   var payload = Object.assign({}, data, {
     _subject: subject,
     _template: 'table',
-    _captcha: 'false'
+    _captcha: 'false',
+    _autoresponse: AUTORESPONSE
   });
 
   var btn = form.querySelector('.btn-submit');
@@ -76,6 +87,7 @@ function handleSubmit(event) {
       if (!out || (out.success !== 'true' && out.success !== true)) {
         throw new Error('submit failed');
       }
+      analyticsTrack('form_submit', { category: data.category, has_company: data.company ? 'yes' : 'no' });
       form.reset();
       btn.textContent = 'Sent! We will reply within 24h';
       btn.style.background = '#059669';
@@ -88,6 +100,7 @@ function handleSubmit(event) {
       }, 6000);
     })
     .catch(function () {
+      analyticsTrack('form_error', { category: data.category, reason: 'rejected_or_network' });
       btn.textContent = 'Send failed - please try again';
       btn.style.background = '#dc2626';
       btn.disabled = false;
