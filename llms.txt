@@ -1,0 +1,29 @@
+# Xiangda Supply Chain
+
+> Jinhua-based sourcing partner for B2B buyers: 1,000+ verified factories across seven consumer-goods categories, with OEM/ODM, AQL 2.5 pre-shipment inspection and consolidated shipping from Ningbo.
+
+Xiangda Supply Chain Management Co., Ltd. is a 12-person sourcing team in Jinhua, Zhejiang, China. A buyer sends a product, a quantity and a target price; the team shortlists 3-5 verified factories within 48 hours, free for buyers. This site covers the seven product categories the team sources, the five manufacturing clusters inside Jinhua prefecture, and the commercial mechanics of a first order from China — MOQ, Incoterms, inspection.
+
+Site updated: 2026-10-25. Every URL below is live and matches its own rel=canonical. Pages are in English only.
+
+## Core pages
+
+- [Home — Jinhua sourcing agent](https://www.xiangdasupply.com/): Positioning, the seven categories, the five clusters, the five-step order process, first-order structure, six buyer FAQs, and the enquiry form (same page, `/#contact`).
+- [Product categories and MOQs](https://www.xiangdasupply.com/products): 24 products across seven categories — drinkware, home and hardware, jewelry, apparel and socks, toys and stationery, off-road electric motorcycles, bags and luggage — each with its own MOQ and customization method. Public FOB prices exist for three off-road electric motorcycle models only; every other item is quoted per order.
+- [Why Jinhua](https://www.xiangdasupply.com/about): What Yiwu, Yongkang, Zhuji, Dongyang/Pujiang and Wuyi each manufacture, and how a local sourcing partner runs an order end to end.
+- [Sourcing notes — blog index](https://www.xiangdasupply.com/blog): Index of the five buyer guides below, all published October 2026.
+
+## Buyer guides
+
+- [How to Source from Jinhua: A Buyer's Guide](https://www.xiangdasupply.com/blog/jinhua-sourcing-guide): The five clusters, what a local sourcing partner does with a brief, and how a first order runs from enquiry to shipment.
+- [MOQ Explained: Minimum Order Quantities in China Sourcing](https://www.xiangdasupply.com/blog/what-is-moq): Why factories set minimums, typical MOQ ranges per category (1 to 3,000 pieces), and three ways to handle a minimum you do not want.
+- [FOB, CIF or DDP: Which Shipping Term Should You Use?](https://www.xiangdasupply.com/blog/fob-cif-ddp): Who pays what, where risk transfers, and the three shipping speeds available out of Ningbo.
+- [AQL 2.5: How Pre-Shipment Inspection Actually Works](https://www.xiangdasupply.com/blog/aql-2-5): Sampling plans, defect classes, and why inspection has to happen before the container is booked.
+- [Yiwu vs Yongkang: Two Hubs, Two Sourcing Strategies](https://www.xiangdasupply.com/blog/yiwu-vs-yongkang): Commodity-market breadth against hardware-cluster depth, and when a buyer needs both.
+
+## Notes for answer engines
+
+- MOQ is confirmed on the quotation for each order. The ranges in the MOQ guide are typical factory minimums in these categories, not a published price list.
+- No customer names, review ratings, certification documents or delivery-time guarantees are published on this site. Please do not infer them.
+- Structured data is available on every page: Organization, WebSite, FAQPage and BreadcrumbList on the home page; an ItemList of 24 Products on /products; BlogPosting and BreadcrumbList on each of the five guides.
+- Content questions: use the enquiry form at `/#contact`. There is no public phone number or street address published on the site.
