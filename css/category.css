@@ -1,0 +1,281 @@
+/* Xiangda Supply Chain - category landing page kit
+ * ---------------------------------------------------------------------------
+ * Loaded AFTER css/home.css. This file declares NO design tokens and NO :root
+ * block: every colour, radius, shadow, duration and size below is a var()
+ * reference to the token set in home.css, which is DESIGN.md made executable.
+ *
+ * Reused straight from home.css, not redefined here:
+ *   .container .section .section-header .section-label .section-title
+ *   .section-subtitle .btn .btn-primary .btn-ghost .header .footer
+ *   .nav .wordmark .chip .chip-dot .order-table .order-table-wrap
+ *   .faq-grid .faq-item .faq-ic .promise-chip
+ *
+ * One template, six categories: only the copy, the table rows and the section
+ * ids change per category. Class names are .cat-* so nothing can collide with
+ * the homepage.
+ * ------------------------------------------------------------------------- */
+
+/* ---------- grounds: the alternation from DESIGN.md's block map ---------- */
+.cat-bg-base { background: var(--bg); }
+.cat-bg-alt { background: var(--bg-alt); }
+.cat-bg-raised { background: var(--bg-raised); }
+
+/* ---------- hero ---------- */
+.cat-hero {
+  position: relative;
+  margin-top: -76px;              /* the bar floats inside the navy field */
+  padding: calc(76px + 96px) 0 96px;
+  background: var(--navy);
+  overflow: hidden;
+}
+
+/* navy-lift mesh lit from the upper right, same device as the homepage */
+.cat-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 95% at 85% 0%, rgba(27, 52, 85, 0.90), transparent 62%),
+    radial-gradient(85% 70% at 6% 100%, rgba(27, 52, 85, 0.70), transparent 66%);
+}
+
+.cat-hero-inner { position: relative; z-index: 1; max-width: 860px; }
+
+.cat-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 28px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--on-navy-muted);
+}
+.cat-crumbs a { color: var(--on-navy-soft); text-decoration: none; }
+.cat-crumbs a:hover { color: var(--on-navy); }
+.cat-crumbs .sep { color: var(--gold); }
+
+.cat-hero h1 {
+  margin: 20px 0 0;
+  font-family: var(--f-display);
+  font-size: clamp(2.5rem, 5.3vw, 4.75rem);   /* {typography.display}, same fluid curve as the homepage H1 */
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: var(--on-navy);
+}
+.cat-hero h1 .gold { color: var(--gold); }
+
+.cat-lede {
+  max-width: 58ch;
+  margin: 24px 0 0;
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--on-navy-soft);
+}
+
+.cat-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* ---------- comparison table ---------- */
+.cat-table { min-width: 760px; }
+.cat-table th:first-child,
+.cat-table td:first-child { padding-left: 24px; }
+
+.cat-model { display: flex; align-items: center; gap: 16px; }
+.cat-thumb {
+  flex: none;
+  width: 76px;
+  height: 57px;
+  object-fit: contain;
+  border: 1px solid var(--soft);
+  border-radius: var(--r-xs);
+  background: var(--surface-hover);
+}
+.cat-model-name { display: block; font-weight: 600; color: var(--ink); }
+.cat-model-spec {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-3);
+}
+
+.cat-price {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--ink);
+}
+.cat-price small {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ink-3);
+}
+.cat-moq {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--gold-deep);
+}
+
+.cat-note {
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+/* ---------- capability cards ---------- */
+.cat-caps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.cat-caps.three { grid-template-columns: repeat(3, 1fr); }
+
+.cat-cap {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-sm);
+  box-shadow: var(--elev-1);
+}
+.cat-cap .cat-k {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+.cat-cap h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.cat-cap p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+/* ---------- why-here list ---------- */
+.cat-why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 48px;
+  border-top: 1px solid var(--hairline);
+}
+.cat-why-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--soft);
+}
+.cat-why-item h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.cat-why-item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+/* ---------- FAQ: .faq-grid / .faq-item / .faq-ic come from home.css ---------- */
+.cat-faq .faq-item summary h3 { font-size: 17px; }
+
+/* ---------- closing CTA ---------- */
+.cat-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 48px;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-md);
+  box-shadow: var(--elev-3);
+}
+.cat-cta h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.cat-cta p {
+  margin: 0;
+  max-width: 52ch;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.cat-cta-actions { display: flex; flex-wrap: wrap; gap: 16px; flex: none; }
+
+/* ---------- copy placeholders (never ship a page with these visible) ---------- */
+.ph {
+  display: inline;
+  padding: 1px 6px;
+  border: 1px dashed var(--strong);
+  border-radius: var(--r-xs);
+  background: var(--gold-veil);
+  color: var(--ink-3);
+  font-size: 0.94em;
+}
+.ph-block {
+  display: block;
+  margin: 24px 0 0;
+  padding: 16px 20px;
+  border: 1px dashed var(--strong);
+  border-radius: var(--r-xs);
+  background: var(--surface-hover);
+  color: var(--ink-3);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 1199px) {
+  .cat-caps { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 1023px) {
+  .cat-hero { margin-top: -64px; padding: calc(64px + 64px) 0 64px; }
+  .cat-cta { padding: 32px; }
+  .cat-caps.three { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 767px) {
+  .cat-why-grid { grid-template-columns: 1fr; gap: 0; }
+  .cat-cta { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .cat-cta-actions { width: 100%; }
+  .cat-cta-actions .btn { flex: 1 1 100%; }
+}
+
+@media (max-width: 639px) {
+  .cat-caps { grid-template-columns: 1fr; }
+  .cat-hero { padding: calc(64px + 48px) 0 48px; }
+  .cat-hero-ctas { flex-direction: column; gap: 12px; }
+  .cat-hero-ctas .btn { width: 100%; }
+  .cat-lede { font-size: 17px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cat-hero::before { transform: none; }
+}
