@@ -16,7 +16,7 @@
  *   scroll_75       75% of page height scrolled       (once per page)
  * ------------------------------------------------------------------------- */
 
-var GA_ID = '';
+var GA_ID = 'G-R701L3ZCQT';
 
 (function () {
   'use strict';
