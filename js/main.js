@@ -36,6 +36,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  /* Category prefill: /?cat=drinkware#contact - query string before the hash. */
+  (function () {
+    var m = /[?&]cat=([a-z]+)/.exec(window.location.search);
+    if (!m) { return; }
+    var sel = document.getElementById('category');
+    if (!sel) { return; }
+    for (var i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].value === m[1]) { sel.value = m[1]; break; }
+    }
+  })();
+
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     a.addEventListener('click', function(e) {
       var href = this.getAttribute('href');
