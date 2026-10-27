@@ -21,7 +21,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/home.css">
 <script type="text/javascript">
-function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage:'en', includedLanguages:'en,es,fr,de,it,pt,ru,ar,ja,ko,hi,th,vi,tr,nl,pl,sv,da,fi,no,he,id,ms,tl', layout: google.translate.InlineLayout.SIMPLE, autoDisplay: true}, 'google_translate_element'); }
+function googleTranslateElementInit() {
+  var TE = window.google && window.google.translate && window.google.translate.TranslateElement;
+  if (!TE) {
+    window.__gtTry = (window.__gtTry || 0) + 1;
+    if (window.__gtTry < 40) { setTimeout(googleTranslateElementInit, 250); }
+    return;
+  }
+  var host = document.getElementById('google_translate_element');
+  if (!host) {
+    host = document.createElement('div');
+    host.id = 'google_translate_element';
+    host.style.cssText = 'margin:18px 0 0;font-size:12px;line-height:1.4';
+    (document.querySelector('footer .container') || document.body).appendChild(host);
+  }
+  if (host.getAttribute('data-gt') === '1') { return; }
+  host.setAttribute('data-gt', '1');
+  var layout = (TE.InlineLayout && TE.InlineLayout.SIMPLE) ? TE.InlineLayout.SIMPLE : 'SIMPLE';
+  new TE({pageLanguage:'en', includedLanguages:'en,es,fr,de,it,pt,ru,ar,ja,ko,hi,th,vi,tr,nl,pl,sv,da,fi,no,he,id,ms,tl', layout: layout, autoDisplay: true}, 'google_translate_element');
+}
 </script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 <script type="application/ld+json">
@@ -246,6 +264,7 @@ function googleTranslateElementInit() { new google.translate.TranslateElement({p
       </article>
     </div>
     <p class="cat-caveat">MOQs are typical factory minimums &mdash; confirmed on your quote.</p>
+    <p class="cat-caveat"><a href="/products" style="color:var(--gold-deep);border-bottom:1px solid currentColor">View all 24 products</a></p>
   </div>
 </section>
 
