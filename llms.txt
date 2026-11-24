@@ -2,9 +2,9 @@
 
 > Jinhua-based sourcing partner for B2B buyers: 1,000+ verified factories across seven consumer-goods categories, with OEM/ODM, AQL 2.5 pre-shipment inspection and consolidated shipping from Ningbo.
 
-Xiangda Supply Chain Management Co., Ltd. is a 12-person sourcing team in Jinhua, Zhejiang, China. A buyer sends a product, a quantity and a target price; the team shortlists 3-5 verified factories within 48 hours, free for buyers. This site covers seven product categories, the five manufacturing clusters inside Jinhua prefecture, and the commercial mechanics of a first order from China (MOQ, Incoterms, inspection).
+Xiangda Supply Chain Management Co., Ltd. is a 12-person sourcing team in Jinhua, Zhejiang, China. A buyer sends a product, a quantity and a target price; the team shortlists 3-5 verified factories within 48 hours, free for buyers. This site covers seven dedicated product category landing pages, the five manufacturing clusters inside Jinhua prefecture, and the commercial mechanics of a first order from China (MOQ, Incoterms, inspection).
 
-Last updated: 2026-11-23. Every URL below is live and matches its rel=canonical. Page count: 19.
+Last updated: 2026-11-24. Every URL below is live and matches its rel=canonical. Page count: 22.
 
 ## Core pages
 
@@ -15,10 +15,13 @@ Last updated: 2026-11-23. Every URL below is live and matches its rel=canonical.
 
 ## Category pages
 
-- [Off-road electric motorcycles](https://www.xiangdasupply.com/categories/off-road-ev): The three models with published FOB price bands, their per-model MOQ (1, 1 and 80), inspection and Ningbo terms.
-- [Drinkware and thermoses](https://www.xiangdasupply.com/categories/drinkware): Vacuum flasks, travel mugs and tumblers from Yongkang, with OEM branding and MOQ bands. Quote on request.
-- [Jewelry and accessories](https://www.xiangdasupply.com/categories/jewelry): Stainless steel and crystal pieces from Yiwu, custom designs and packaging. Quote on request.
-- [Apparel and socks](https://www.xiangdasupply.com/categories/apparel): Sports, yoga and compression socks plus knitwear from Zhuji. Quote on request.
+- [Off-road electric motorcycles](https://www.xiangdasupply.com/categories/off-road-ev): The three models with published FOB price bands, their per-model MOQ (1, 1 and 80), inspection and Ningbo terms from Wuyi cluster.
+- [Drinkware and thermoses](https://www.xiangdasupply.com/categories/drinkware): Vacuum flasks, travel mugs and tumblers from Yongkang (70% global capacity), with OEM branding and MOQ bands. Quote on request.
+- [Home and hardware](https://www.xiangdasupply.com/categories/hardware): Die-cast cookware, stainless steel stockpots, hand tools and garden power equipment from Yongkang Hardware Capital. ISO9001/BSCI/LFGB/FDA compliance. Quote on request.
+- [Jewelry and accessories](https://www.xiangdasupply.com/categories/jewelry): Stainless steel and crystal pieces from Yiwu (75,000+ booths), custom designs and packaging. Quote on request.
+- [Apparel and socks](https://www.xiangdasupply.com/categories/apparel): Sports, yoga and compression socks plus knitwear from Zhuji (30%+ global sock output). OEKO-TEX certified. Quote on request.
+- [Toys and stationery](https://www.xiangdasupply.com/categories/toys): Plush toys, Montessori wooden educational games, novelty fidgets and stationery from Yiwu. CPC/CE/EN71/ASTM F963 compliance. Quote on request.
+- [Bags and luggage](https://www.xiangdasupply.com/categories/bags): Cotton canvas totes, cosmetic pouches, commuter backpacks and hard-shell luggage from Yiwu District 2. GRS/REACH compliance. Quote on request.
 
 ## Buyer guides
 
@@ -39,6 +42,6 @@ Last updated: 2026-11-23. Every URL below is live and matches its rel=canonical.
 - MOQ is always confirmed on the quotation; the ranges published here are typical factory minimums, not a price list.
 - Only the three off-road electric motorcycles carry public FOB prices. Every other category is quoted per specification, and no figure should be inferred for them.
 - MOQ differs by model and by product, not by category: two motorcycles start at 1 unit and one starts at 80.
-- Certificates (CE, RoHS, Oeko-Tex, test reports) are held by the producing factory, not by Xiangda; they are verified per order and the copy is passed to the buyer.
+- Certificates (CE, CPC, EN71, LFGB, FDA, RoHS, Oeko-Tex, GRS, test reports) are held by the producing factory, not by Xiangda; they are verified per order and the copy is passed to the buyer.
 - The site publishes no customer names, review ratings, sales figures or delivery-day promises, and none should be inferred.
 - Structured data on the site: Organization, WebSite and FAQPage on the home page; ItemList of Products on /products; BreadcrumbList plus Product or Article markup and FAQPage on category pages and guides.
